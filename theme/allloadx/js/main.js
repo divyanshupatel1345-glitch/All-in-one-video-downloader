@@ -16,7 +16,7 @@ $(document).ready(function () {
     });
 });
 
-$.getScript("theme/vd6s/js/suggeser.js",
+$.getScript("theme/allloadx/js/suggeser.js",
     function () {
         $("#txt-url").bsSuggest({
             indexId: 0,             //data.value 的第几个数据，作为input输入框的内容

@@ -123,3 +123,12 @@ footer{background:#fff;border-top:1px solid #eee;padding:3rem 1rem 1rem;}
         min-height: 450px;
     }
 }
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.platform-icon path {
+    fill: #333;
+}
