@@ -1,0 +1,125 @@
+:root {
+    --primary:#e91e63;
+    --primary-dark:#c2185b;
+}
+body{font-family:"Segoe UI",Roboto,sans-serif;background:#fafafa;color:#333;}
+.navbar-brand span{color:var(--primary);font-weight:700;}
+
+/* ===== Hero ===== */
+.hero{background:#fff;padding:4rem 1rem;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.03);}
+.hero h1{font-weight:700;}
+.download-form{max-width:800px;margin:2rem auto 0;}
+.form-control{border-radius:0.5rem 0 0 0.5rem;border-color:#ddd;height:3.2rem;}
+.btn-download{background:var(--primary);color:#fff;border-radius:0 0.5rem 0.5rem 0;white-space:nowrap;font-weight:500;}
+.btn-download:hover{background:var(--primary-dark);color:#fff;}
+
+/* ===== Intro Section ===== */
+.intro-section{max-width:960px;margin:4rem auto 3rem;padding:0 1rem;}
+.intro-section h2{font-size:1.8rem;margin-bottom:1.5rem;font-weight:600;color:#222;text-align:center;}
+.intro-section p{color:#666;line-height:1.7;margin-bottom:1rem;text-align:left;}
+
+/* ===== Common Section ===== */
+section{max-width:960px;margin:4rem auto;padding:0 1rem;}
+.section-title{text-align:center;font-weight:600;margin-bottom:2rem;font-size:1.8rem;}
+
+/* ===== Card - Frosted Glass ===== */
+.custom-card{
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius:1rem;
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    transition:transform .25s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+}
+.custom-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 28px rgba(0,0,0,0.12);
+    backdrop-filter:blur(16px);
+}
+.custom-card h5{color:var(--primary);font-weight:600;}
+.custom-card p{color:#333;}
+.why{background:#f9f9f9;border-radius:1rem;padding:3rem 1rem;}
+
+/* ===== Mid Section ===== */
+.mid-section{max-width:900px;margin:4rem auto;padding:2rem 1rem;border-top:1px solid #eee;border-bottom:1px solid #eee;}
+.mid-section h2{text-align:center;color:#333;font-weight:500;font-size:1.5rem;margin-bottom:1rem;}
+.mid-section p{text-align:left;color:#666;line-height:1.7;}
+
+/* ===== FAQ ===== */
+.accordion-button:not(.collapsed){background-color:var(--primary);color:#fff;}
+.accordion-button:focus{box-shadow:0 0 0 0.25rem rgba(233,30,99,0.25);}
+
+/* ===== Footer ===== */
+footer{background:#fff;border-top:1px solid #eee;padding:3rem 1rem 1rem;}
+.footer-title{font-weight:600;font-size:1.1rem;margin-bottom:1rem;}
+.footer-link{
+    display:block;
+    color:#666;
+    text-decoration:none;
+    margin-bottom:.4rem;
+    transition:color .2s;
+}
+.footer-link:hover{color:var(--primary);}
+.footer-bottom{text-align:center;padding-top:2rem;color:#888;font-size:0.9rem;border-top:1px solid #f0f0f0;margin-top:2rem;}
+#search-form {
+    position: relative
+}
+#search-form #clear-btn{
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#downloadErrorModal .modal-header button{
+    position: absolute;
+    right: 10px;
+}
+
+.search-info>a{
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    height: 43px;
+    line-height: 19px;
+    overflow: hidden;
+    padding-top: 5px;
+    text-align: left;
+    text-decoration: none;
+    text-overflow: ellipsis
+}
+.search-info .btn{
+    width: 100%;
+}
+#suggestion-list td{
+    cursor: pointer;
+}
+.jhover td{
+    background-color: cornflowerblue;
+}
+.show{
+    display: block !important;
+}
+#myModal .modal-body{
+    display: unset!important;
+}
+/* ===== Mobile Optimisation ===== */
+@media (max-width:768px){
+    .hero{padding:2rem 0.5rem;}
+    .download-form{width:100%;max-width:95%;}
+    .form-control{height:2.8rem;font-size:0.95rem;padding:0.7rem 0.8rem;}
+    .btn-download{padding:0.7rem 1.4rem;font-size:0.95rem;margin-top: 5px;border-radius: 10px;}
+    footer{text-align:center;}
+    #search-form #clear-btn{
+        right: 10px;
+        top: 25%;
+    }
+    #search-form #txt-url{
+        padding-right: 40px;
+        border-radius: 10px;
+    }
+    .panel-body {
+        min-height: 450px;
+    }
+}
