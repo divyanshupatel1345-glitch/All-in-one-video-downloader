@@ -1,134 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root {
-    --primary:#e91e63;
-    --primary-dark:#c2185b;
+    --primary: #6a11cb;
+    --secondary: #2575fc;
+    --primary-dark: #3b0764;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --text-color: #555;
+    --card-bg: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-body{font-family:"Segoe UI",Roboto,sans-serif;background:#fafafa;color:#333;}
-.navbar-brand span{color:var(--primary);font-weight:700;}
 
-/* ===== Hero ===== */
-.hero{background:#fff;padding:4rem 1rem;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.03);}
-.hero h1{font-weight:700;}
-.download-form{max-width:800px;margin:2rem auto 0;}
-.form-control{border-radius:0.5rem 0 0 0.5rem;border-color:#ddd;height:3.2rem;}
-.btn-download{background:var(--primary);color:#fff;border-radius:0 0.5rem 0.5rem 0;white-space:nowrap;font-weight:500;}
-.btn-download:hover{background:var(--primary-dark);color:#fff;}
-
-/* ===== Intro Section ===== */
-.intro-section{max-width:960px;margin:4rem auto 3rem;padding:0 1rem;}
-.intro-section h2{font-size:1.8rem;margin-bottom:1.5rem;font-weight:600;color:#222;text-align:center;}
-.intro-section p{color:#666;line-height:1.7;margin-bottom:1rem;text-align:left;}
-
-/* ===== Common Section ===== */
-section{max-width:960px;margin:4rem auto;padding:0 1rem;}
-.section-title{text-align:center;font-weight:600;margin-bottom:2rem;font-size:1.8rem;}
-
-/* ===== Card - Frosted Glass ===== */
-.custom-card{
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius:1rem;
-    box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    transition:transform .25s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--text-color);
+    line-height: 1.8;
 }
-.custom-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 28px rgba(0,0,0,0.12);
-    backdrop-filter:blur(16px);
-}
-.custom-card h5{color:var(--primary);font-weight:600;}
-.custom-card p{color:#333;}
-.why{background:#f9f9f9;border-radius:1rem;padding:3rem 1rem;}
 
-/* ===== Mid Section ===== */
-.mid-section{max-width:900px;margin:4rem auto;padding:2rem 1rem;border-top:1px solid #eee;border-bottom:1px solid #eee;}
-.mid-section h2{text-align:center;color:#333;font-weight:500;font-size:1.5rem;margin-bottom:1rem;}
-.mid-section p{text-align:left;color:#666;line-height:1.7;}
-
-/* ===== FAQ ===== */
-.accordion-button:not(.collapsed){background-color:var(--primary);color:#fff;}
-.accordion-button:focus{box-shadow:0 0 0 0.25rem rgba(233,30,99,0.25);}
-
-/* ===== Footer ===== */
-footer{background:#fff;border-top:1px solid #eee;padding:3rem 1rem 1rem;}
-.footer-title{font-weight:600;font-size:1.1rem;margin-bottom:1rem;}
-.footer-link{
-    display:block;
-    color:#666;
-    text-decoration:none;
-    margin-bottom:.4rem;
-    transition:color .2s;
+.navbar {
+    transition: background-color 0.3s ease;
 }
-.footer-link:hover{color:var(--primary);}
-.footer-bottom{text-align:center;padding-top:2rem;color:#888;font-size:0.9rem;border-top:1px solid #f0f0f0;margin-top:2rem;}
-#search-form {
-    position: relative
+
+.navbar-brand span {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.5rem;
 }
-#search-form #clear-btn{
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 6rem 1rem;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+}
+
+.hero h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+}
+
+.download-form {
+    max-width: 700px;
+    margin: 2.5rem auto 0;
+    position: relative;
+}
+
+.form-control {
+    border-radius: 50px;
+    border: none;
+    height: 3.5rem;
+    padding-left: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.btn-download {
+    background: var(--primary);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     position: absolute;
-    right: 15%;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
-    cursor: pointer;
-}
-#downloadErrorModal .modal-header button{
-    position: absolute;
-    right: 10px;
+    height: calc(3.5rem - 10px);
+    border: none;
+    padding: 0 2rem;
+    transition: background-color 0.3s ease;
 }
 
-.search-info>a{
+.btn-download:hover {
+    background: var(--primary-dark);
+}
+
+
+/* ===== Sections ===== */
+section {
+    max-width: 1100px;
+    margin: 5rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--dark);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
     display: block;
-    font-size: 13px;
-    font-weight: 500;
-    height: 43px;
-    line-height: 19px;
-    overflow: hidden;
-    padding-top: 5px;
-    text-align: left;
-    text-decoration: none;
-    text-overflow: ellipsis
-}
-.search-info .btn{
-    width: 100%;
-}
-#suggestion-list td{
-    cursor: pointer;
-}
-.jhover td{
-    background-color: cornflowerblue;
-}
-.show{
-    display: block !important;
-}
-#myModal .modal-body{
-    display: unset!important;
-}
-/* ===== Mobile Optimisation ===== */
-@media (max-width:768px){
-    .hero{padding:2rem 0.5rem;}
-    .download-form{width:100%;max-width:95%;}
-    .form-control{height:2.8rem;font-size:0.95rem;padding:0.7rem 0.8rem;}
-    .btn-download{padding:0.7rem 1.4rem;font-size:0.95rem;margin-top: 5px;border-radius: 10px;}
-    footer{text-align:center;}
-    #search-form #clear-btn{
-        right: 10px;
-        top: 25%;
-    }
-    #search-form #txt-url{
-        padding-right: 40px;
-        border-radius: 10px;
-    }
-    .panel-body {
-        min-height: 450px;
-    }
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
 }
 
+/* ===== Cards ===== */
+.custom-card {
+    background: var(--card-bg);
+    border: none;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.custom-card h5 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* ===== Why Choose Section Specifics ===== */
+.why {
+    background: var(--light);
+    border-radius: 20px;
+    padding: 4rem 1rem;
+}
+
+/* ===== Mid Section ===== */
+.mid-section {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* ===== FAQ ===== */
+.accordion-item {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.accordion-button {
+    border-radius: 10px !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+}
+
+/* ===== Footer ===== */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 4rem 1rem 1rem;
+    margin-top: 5rem;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer-link {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color .2s;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 2rem;
+}
+
+/* ===== Platform Icons ===== */
 .platform-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
 }
 
 .platform-icon path {
-    fill: #333;
+    fill: var(--primary);
+    transition: fill 0.3s ease;
+}
+
+.custom-card:hover .platform-icon path {
+    fill: var(--primary-dark);
+}
+
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1rem;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .btn-download {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 1rem;
+        height: 3.2rem;
+    }
+
+    .download-form {
+        display: flex;
+        flex-direction: column;
+    }
 }

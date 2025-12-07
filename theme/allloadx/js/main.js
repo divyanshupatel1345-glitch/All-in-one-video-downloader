@@ -1,18 +1,18 @@
-$(document).ready(function () {
-    //判断输入框是否有值
-    if ($("#txt-url").val().length >0){
-        $("#clear-btn").show();
-    }
-    // 添加输入事件监听器
-    $("#txt-url").on("input",function (){
-        if ($("#txt-url").val().length >0){
-            $("#clear-btn").show();
-        }
-    })
-    // 添加清除按钮点击事件
-    $("#clear-btn").click(function() {
-        $("#txt-url").val(""); // 清空输入框内容
-        $("#clear-btn").hide();
+$(document).ready(function() {
+    // Handle Nav Link Clicks
+    $('.nav-link').on('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Get the platform name from the clicked link
+        const platform = $(this).text();
+
+        // Update the hero title
+        $('.hero h1').text(platform);
+
+        // Remove 'active' class from all nav-links
+        $('.nav-link').removeClass('active');
+        // Add 'active' class to the clicked link
+        $(this).addClass('active');
     });
 });
 
